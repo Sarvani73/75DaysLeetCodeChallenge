@@ -30,11 +30,10 @@ class Solution {
 
         ListNode first=head,second=prev;
         while(second!=null){
-            ListNode n1=first.next,n2=second.next;
+            ListNode t=first.next;
             first.next=second;
-            second.next=n1;
-            first=n1;
-            second=n2;
+            first=second;
+            second=t;
         }
     }
 }
